@@ -7,7 +7,7 @@ cargo run
 
 
 ## 3. Put policy: 1 tab
-etcdctl put cedar/policy/allow_alice "permit(principal == User::\"alice\", action, resource);"
+etcdctl put cedar/policy/allow_alice 'permit(principal == User::"alice", action, resource);'
 
 ## 4. Update entities
 etcdctl put cedar/data/entities '[{"uid":{"type":"User","id":"alice"},"attrs":{},"parents":[]},{"uid":{"type":"Document","id":"doc1"},"attrs":{"owner":"alice"},"parents":[]}]'
